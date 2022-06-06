@@ -1,1 +1,882 @@
-Hello World
+
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta
+            name="مستندات صرافی راستین"
+            content="مستندات صرافی راستین"
+        >
+    <title>API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-f47d16a4.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-5c68d5d9.css" rel="stylesheet" media="print" />
+    <link href="stylesheets/custom-1213ed84.css" rel="stylesheet" />
+      <script src="javascripts/all_nosearch-18c3ed8e.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;plane&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-83ba2e87.png" class="logo" alt="" />
+      <html lang="fa">
+        <div class="lang-selector">
+              <a href="#" data-language-name="plane">plane</a>
+        </div>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#api" class="toc-h1 toc-link" data-title="مستندات API راستین">مستندات API راستین</a>
+          </li>
+          <li>
+            <a href="#d04ae27f5f" class="toc-h1 toc-link" data-title="احراز هویت و توکن">احراز هویت و توکن</a>
+          </li>
+          <li>
+            <a href="#quickstart" class="toc-h1 toc-link" data-title="راهنمای شروع به کار با API">راهنمای شروع به کار با API</a>
+          </li>
+          <li>
+            <a href="#8790ae6ccd" class="toc-h1 toc-link" data-title="اطلاعات بازارهای راستین">اطلاعات بازارهای راستین</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#24e631efa2" class="toc-h2 toc-link" data-title="اطلاعات یک بازار خاص">اطلاعات یک بازار خاص</a>
+                  </li>
+                  <li>
+                    <a href="#89f41b8497" class="toc-h2 toc-link" data-title="لیست سفارش‌ها:اردر بوک">لیست سفارش‌ها:اردر بوک</a>
+                  </li>
+                  <li>
+                    <a href="#3fe8d57657" class="toc-h2 toc-link" data-title="لیست معاملات">لیست معاملات</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#a74b7729ca" class="toc-h1 toc-link" data-title="معامله در بازار">معامله در بازار</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#e12b63a512" class="toc-h2 toc-link" data-title="ثبت سفارش جدید">ثبت سفارش جدید</a>
+                  </li>
+                  <li>
+                    <a href="#b6b61d42e9" class="toc-h2 toc-link" data-title="لیست سفارش ها">لیست سفارش ها</a>
+                  </li>
+                  <li>
+                    <a href="#27f17a67f7" class="toc-h2 toc-link" data-title="لغو سفارش">لغو سفارش</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#d6a07813e2" class="toc-h1 toc-link" data-title="اطلاعات مالی کاربر">اطلاعات مالی کاربر</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#7c08b9b779" class="toc-h2 toc-link" data-title="درخواست برداشت">درخواست برداشت</a>
+                  </li>
+                  <li>
+                    <a href="#8ca7bf3a04" class="toc-h2 toc-link" data-title="تاریخچه واریز رمز ارز">تاریخچه واریز رمز ارز</a>
+                  </li>
+                  <li>
+                    <a href="#6986c2264b" class="toc-h2 toc-link" data-title="دریافت و ساخت کیف پول">دریافت و ساخت کیف پول</a>
+                  </li>
+                  <li>
+                    <a href="#8005579092" class="toc-h2 toc-link" data-title="دریافت مقادیر آزاد هر کیف پول">دریافت مقادیر آزاد هر کیف پول</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+        <ul class="toc-footer">
+            <li><a href='https://raastin.com/account/api-management'>ساخت api token </a></li>
+            <li><a href='https://raastin.com'>راستین</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='api'>مستندات API راستین</h1>
+<p>سلام. مفتخریم که در صرافی راستین‌‌، خدمات با کیفیت را با کمترین کارمزد در اختیار شما مشتریان محترم قرار دهیم. با توجه به اهمیت استفاده از سرویس API برای انجام معاملات خودکار این سند تهیه شده است.</p>
+<h1 id='d04ae27f5f'>احراز هویت و توکن</h1>
+<blockquote>
+<p>جهت احراز هویت از این HTTP Header استفاده کنید:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>Authorization: Token yourTOKENhereHEX0000000000
+</code></pre></div>
+<blockquote>
+<p>بخاطر داشته باشید که <code>yourTOKENhereHEX0000000000</code> را با توکن خود جایگذاری کنید.</p>
+</blockquote>
+
+<p>API ها در راستین به دو دسته تقسیم می‌شوند. دسته نخست  API های عمومی است که نیازی به احراز هویت و ارسال توکن نیست. برای دسترسی به API های خصوصی لازم است  توکن به عنوان HTTP Header درخواست به صورت زیر ارسال شود:</p>
+
+<aside class="notice">
+برای دریافت توکن می‌توانید با مراجعه به پنل کاربری خود در راستین  از بخش حساب کاربری وارد صفحه <a href="https://raastin.com/account/api-management">مدیریت apiها</a> شده  و توکن خود را دریافت نمایید.
+</aside>
+
+<h1 id="quickstart">راهنمای شروع به کار با API</h1>
+
+<ul>
+<li>محدودیت فراخوانی :‌ ۱۰۰ درخواست در دقیقه</li>
+</ul>
+<h1 id='8790ae6ccd'>اطلاعات بازارهای راستین</h1><div class="highlight"><pre class="highlight plaintext"><code>
+GET https://api.raastin.com/api/v1/market/symbols/ HTTP/1.1
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>{
+    "name": "BTCUSDT",نام بازار
+        "asset": "BTC",ارز معامله شده
+        "base_asset": "USDT",ارز پایه
+        "taker_fee": "0.002", کارمزد معامله ای که بر اساس ثبت سفارش جدید روی تابلوی معاملات انجام شود
+        "maker_fee": "0",کارمزد معامله ای که بر اساس انتخاب از سفارشات روی تابلو انجام شود
+        "tick_size": 2,
+        "step_size": 5,
+        "min_trade_quantity": "0.00001",مقدار کمینه مجاز برای معامله
+        "max_trade_quantity": "9000",مقدار بیشینه ماز برای معامله
+        "enable": false فعال بودن بازار
+}
+
+</code></pre></div>
+<p>برای دریافت اطلاعات مربوط به همه ی بازارهای راستین از این API استفاده کنید.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/market/symbols</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ عمومی</li>
+</ul>
+
+<p>در این api امکان فیلتر کردن بازار بر اساس name و asset symbol    و base_asset فراهم شده است. برای این منظور کافی است تا پارامترهای ذکر شده به عنوان کوئری پارام در url ارسال شود.</p>
+
+<p>نمونه:</p>
+
+<p><code>http://api.raastin.com/api/v1/market/symbols/?base_asset=USDT&amp;asset=BTC</code></p>
+<h2 id='24e631efa2'>اطلاعات یک بازار خاص</h2><div class="highlight"><pre class="highlight plaintext"><code>
+GET https://api.raastin.com/api/v1/market/symbols/symbol/ HTTP/1.1
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "name": "USDTIRT",
+    "asset": "USDT",
+    "base_asset": "IRT",
+    "enable": true,
+    "price": null,قیمت
+    "change": null,تغییرات قیمت در ۲۴ ساعت
+    "change_percent": null,تغییرات درصد قیمت در ۲۴ ساعت
+    "high": null,بیشینه قیمت در ۲۴ ساعت
+    "low": null,کمینه قیمت در ۲۴ ساعت
+    "volume": null,حجم معاملات در ۲۴ ساعت
+    "base_volume": null
+}
+
+</code></pre></div>
+<p>با قرار دادن نام بازار مورد نظر در آدرس زیر می توانید اطلاعات مربوط به تغییرات قیمت و حجم معاملات مربوط  به آن بازار را دریافت کنید.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/market/symbols/symbol</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ عمومی</li>
+</ul>
+<h2 id='89f41b8497'>لیست سفارش‌ها:اردر بوک</h2><div class="highlight"><pre class="highlight plaintext"><code>
+ GET https://api.raastin.com/api/v1/market/depth/symbol HTTP/1.1
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "last_trade": {اخرین معامله
+        "amount": "0.00049",حجم سفارش
+        "price": "1104354177",قیمت سفارش
+        "total": "541133" ارزش سفارش
+    },
+    "bids": [اردر های خرید
+                {
+            "price": "100000",
+            "amount": "10.00000",
+            "depth": "2",
+            "total": "1000000"
+        }
+    ],
+    "asks": [اردرهای فروش
+        {
+            "price": "1112952204",
+            "amount": "0.01517",
+            "depth": "33",
+            "total": "16883484"
+        },
+}
+
+</code></pre></div>
+<p>برای دریافت لیست سفارش‌های هر بازار از این API استفاده کنید.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/market/depth/symbol</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ عمومی</li>
+</ul>
+
+<p>پارامتر:</p>
+
+<p>نماد بازار مورد نظر را باید به جای کلمه symbol وارد کنید.</p>
+<h2 id='3fe8d57657'>لیست معاملات</h2><div class="highlight"><pre class="highlight plaintext"><code>
+ GET https://api.raastin.com/api/v1/market/trades/?symbol=SYMBOL HTTP/1.1
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "count": 3978,
+    "next": "https://api-staging.raastin.com/api/v1/market/trades/?limit=20&amp;offset=20&amp;symbol=BTCIRT",
+    "previous": null,
+    "results": [
+        {
+            "created": "2022-04-27T14:48:27.378360+04:30",
+            "coin": "BTC",
+            "pair": "IRT",
+            "amount": "0.00064",
+            "price": "1099759483",
+            "pair_amount": "703846",
+            "is_buyer_maker": true
+        },
+        {
+            "created": "2022-04-27T14:47:17.375744+04:30",
+            "coin": "BTC",
+            "pair": "IRT",
+            "amount": "0.00065",
+            "price": "1113288328",
+            "pair_amount": "723637",
+            "is_buyer_maker": false
+        },
+}
+
+</code></pre></div>
+<p>برای دریافت لیست معاملات هر بازار  از این API استفاده کنید.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/market/trades/?symbol=SYMBOL</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ عمومی</li>
+</ul>
+
+<p>پارامترها:</p>
+<h1 id='a74b7729ca'>معامله در بازار</h1>
+<p>برای استفاده از api های این بخش استفاده از  توکن و تعریف ip های مجاز الزامی است. برای دریافت توکن و تعریف ip های مجاز لازم است به پنل حساب کاربری خود مراجعه کنید. توجه به این نکته ضروری است که فقط در هنگام درخواست نخست امکان مشاهده توکن وجود دارد و در درخواست های بعدی برای حفظ مسائل امنیتی توکن به صورت کامل نشان داده نمیشود. از این رو ضروری است تا توکن نمایش داده شده در درخواست اول را کپی کنید. در صورت فراموشی توکن ارسال شده لازم است تا توکن قبلی را حذف کرده و توکن جدیدی بسازید.</p>
+<h2 id='e12b63a512'>ثبت سفارش جدید</h2><div class="highlight"><pre class="highlight plaintext"><code>
+POST https://api.raastin.com/api/v1/market/orders/ HTTP/1.1
+Authorization: Token yourTOKENhereHEX0000000000
+
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "id": 620881,
+    "created": "2022-04-27T17:03:57.002570+04:30",
+    "symbol": "BTCIRT",
+    "amount": "100.00000",
+    "filled_amount": "0.00000",
+    "price": "100000",
+    "filled_price": null,
+    "side": "buy",
+    "fill_type": "limit",
+    "status": "new"
+}
+
+</code></pre></div>
+<p>برای ثبت سفارش معامله در بازار راستین از این api استفاده کنید. توجه به این نکته ضروری است که ثبت سفارش الزاما به معنی انجام معامله نیست. با درخواست مشاهده وضعیت سفارش می توانید از وضعیت سفارش خود مطلع شوید.
+برای استفاده از این api لازم است تا در قسمت header توکن خود را ارسال کنید.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/market/orders/</code></li>
+<li>متد : <code>POST</code></li>
+<li>نوع :‌ خصوصی</li>
+</ul>
+
+<p>پارامترهای ورودی:</p>
+
+<table><thead>
+<tr>
+<th>پارامتر</th>
+<th>نوع</th>
+<th>پیش‌فرض</th>
+<th>توضیحات</th>
+<th>نمونه</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbol</td>
+<td>string</td>
+<td>الزامی</td>
+<td>بازار</td>
+<td>-</td>
+</tr>
+<tr>
+<td>amount</td>
+<td>string, int</td>
+<td>الزامی</td>
+<td>مقدار سفارش</td>
+<td>-</td>
+</tr>
+<tr>
+<td>price</td>
+<td>string, int</td>
+<td>الزامی</td>
+<td>قیمت سفارش</td>
+<td>-</td>
+</tr>
+<tr>
+<td>side</td>
+<td>string(buy, sell)</td>
+<td>buy</td>
+<td>نوع سفارش</td>
+<td>-</td>
+</tr>
+<tr>
+<td>fill_type</td>
+<td>string(limit, market)</td>
+<td>limit</td>
+<td>نحوه اجرای سفارش</td>
+<td>-</td>
+</tr>
+<tr>
+<td>market</td>
+<td>string(spot, margin, loan)</td>
+<td>spot</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+<p>حالات خطا: 
+<aside class="warning">
+نکات و ملاحظات</p>
+
+<ul>
+<li>واحد قیمت در بازار های ریالی به ریال است. </li>
+<li>واحد قیمت در بازارهای تتری نیز تتر میباشد.</li>
+<li>واحد پارامتر amount بر اساس رمز ارز مبدا است.
+</aside></li>
+</ul>
+<h2 id='b6b61d42e9'>لیست سفارش ها</h2><div class="highlight"><pre class="highlight plaintext"><code>
+GET https://api.raastin.com/api/v1/market/orders/ HTTP/1.1
+Authorization: Token yourTOKENhereHEX0000000000
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 620597,
+            "created": "2022-04-27T16:06:29.953660+04:30",
+            "symbol": "BTCIRT",
+            "amount": "100.00000",
+            "filled_amount": "0.00000",
+            "price": "100000",
+            "filled_price": null,
+            "side": "buy",
+            "fill_type": "limit",
+            "status": "new"
+        }
+    ]
+}
+
+
+</code></pre></div>
+<p>برای دریافت لیست همه  سفارش ها میتوانید از این api استفاده کنید.</p>
+
+<p>ارسال توکن دریافتی در header برای استفاده از این api ضروری است.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/market/orders/</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ خصوصی</li>
+</ul>
+
+<p>همچنین در این api امکان فیلتر کردن بر اساس وضعیت سفارش و بازار وجود دارد.</p>
+
+<p>آدرس:
+<code>https://api.raastin.com/api/v1/market/orders/?symbol=&amp;status=</code></p>
+
+<p>مقادیر مجاز برای symbol همان بازارهای راستین است و مقادیر مجاز برای status , 
+Canceled,new,filled 
+ است.</p>
+
+<p>برای دریافت اطلاعات مربوط به یک سفارش کافیست در انتهای ادرس api مربوط به لیست سفارشات id سفارش مورد نظر را قرار دهید.</p>
+
+<p><code>https://api.raastin.com/api/v1/market/orders/1</code></p>
+<h2 id='27f17a67f7'>لغو سفارش</h2><div class="highlight"><pre class="highlight plaintext"><code>POST https://api.raastin.com/api/v1/market/orders/cancel/ HTTP/1.1
+Authorization: Token yourTOKENhereHEX0000000000
+id: 1054
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "id": "620597",
+    "canceled_at": "2022-04-27 12:31:49.827768+00:00"
+}
+
+</code></pre></div>
+<p>برای لغو یک سفارش میتوانید از  api استفاده کنید.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/market/orders/cancel/</code></li>
+<li>متد : <code>POST</code></li>
+<li>نوع :‌ خصوصی</li>
+</ul>
+
+<p>ارسال توکن در header برای استفاده از این api ضروری است.</p>
+
+<table><thead>
+<tr>
+<th>پارامتر</th>
+<th>نوع</th>
+<th>پیش‌فرض</th>
+<th>توضیحات</th>
+<th>نمونه</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>int</td>
+<td>الزامی</td>
+<td>شناسه سفارش</td>
+<td>1054</td>
+</tr>
+</tbody></table>
+<h1 id='d6a07813e2'>اطلاعات مالی کاربر</h1><h2 id='7c08b9b779'>درخواست برداشت</h2><div class="highlight"><pre class="highlight plaintext"><code>
+POST https://api.raastin.com/api/v1/apiwithdraw/ HTTP/1.1
+Authorization: Token yourTOKENhereHEX0000000000
+
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "amount": "10.000000000000000000"
+}
+
+
+</code></pre></div>
+<p>برای درخواست برداشت رمز ارز از این api استفاده کنید. </p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/apiwithdraw</code></li>
+<li>متد : <code>POST</code></li>
+<li>نوع :‌ خصوصی</li>
+</ul>
+<h2 id='8ca7bf3a04'>تاریخچه واریز رمز ارز</h2><div class="highlight"><pre class="highlight plaintext"><code>
+GET https://api.raastin.com/api/v1/deposit/list/ HTTP/1.1
+Authorization: Token yourTOKENhereHEX0000000000
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "created": "2022-04-12T17:18:53.909319+04:30",
+            "amount": "49",
+            "status": "done",
+            "link": "",
+            "out_address": "as",
+            "coin": "USDT",
+            "network": "BSC",
+            "trx_hash": null,
+            "fee_amount": "1"
+        }
+    ]
+}
+
+</code></pre></div>
+<p>برای مشاهده تاریخچه واریزهای خود از این api استفاده کنید.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/deposit/list/</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ خصوصی</li>
+</ul>
+<h2 id='6986c2264b'>دریافت و ساخت کیف پول</h2><div class="highlight"><pre class="highlight plaintext"><code>
+GET https://api.raastin.com/api/v1/deposit/address/?coin= &amp;network= HTTP/1.1
+Authorization: Token yourTOKENhereHEX0000000000
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "address": "0xd0d72802b786c45a9ccfcd7f52ac9d58b96e275f"
+}
+
+</code></pre></div>
+<p>برای دریافت آدرس کیف پول  و یا ساخت کیف پول جدید از این  api استفاده کنید. در این api با مشخص کردن مقادیر coin و network در کوپری پارام در صورت وجود کیف پول آدرس آن برگردانده میشود و در صورت عدم وجود کیف پول ساخته شده و آدرس کیف ساخته شده برگردانده می‌شود.</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/apiwithdraw</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ خصوصی</li>
+</ul>
+
+<p>مقادیر مجاز  coin و network:</p>
+
+<table><thead>
+<tr>
+<th>coin</th>
+<th>network</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>USDT</td>
+<td>BTC</td>
+</tr>
+</tbody></table>
+<h2 id='8005579092'>دریافت مقادیر آزاد هر کیف پول</h2><div class="highlight"><pre class="highlight plaintext"><code>
+GET https://api.raastin.com/api/v1/wallet/balance/ HTTP/1.1
+Authorization: Token yourTOKENhereHEX0000000000
+
+</code></pre></div>
+<blockquote>
+<p>درصورت فراخوانی صحیح پاسخ به این صورت خواهد بود:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>
+{
+    "wallet": [
+        {
+            "asset": "USDT",
+            "free": "100000"
+        },
+        {
+            "asset": "BTC",
+            "free": "100000"
+        },
+        {
+            "asset": "IRT",
+            "free": "100000"
+        }
+    ]
+}
+
+</code></pre></div>
+<p>برای دریافت لیست کیف پول ها و مقادیر آزاد هر کدام میتوانید از این api استفاده کنید.
+مقادیر مجاز  coin و network:</p>
+
+<ul>
+<li>آدرس : <code>https://api.raastin.com/api/v1/wallet/balance/</code></li>
+<li>متد : <code>GET</code></li>
+<li>نوع :‌ خصوصی</li>
+</ul>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="plane">plane</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
